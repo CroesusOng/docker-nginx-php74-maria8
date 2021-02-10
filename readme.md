@@ -1,15 +1,14 @@
-.env file
+#.env file
 -------------------------------
 
-# Nginx
-# See https://docs.docker.com/compose/environment-variables/#the-env-file
+## Nginx
 NGINX_HOST=localhost
 
-# PHP
-# See https://hub.docker.com/r/nanoninja/php-fpm/tags/
+## PHP
 PHP_VERSION=7.4.10
+[nanoninja/php-fpm](https://hub.docker.com/r/nanoninja/php-fpm/tags/)
 
-# MySQL
+## MySQL
 MYSQL_VERSION=8.0.21
 MYSQL_HOST=mysql
 MYSQL_DATABASE=test
