@@ -10,7 +10,7 @@ PHP_VERSION=7.4.10
 #[nanoninja/php-fpm](https://hub.docker.com/r/nanoninja/php-fpm/tags/)
 
 #MySQL 
-MYSQL_VERSION=8.0.21
+MYSQL_VERSION=10.5.8
 MYSQL_HOST=mysql
 MYSQL_DATABASE=test
 MYSQL_ROOT_USER=root
