@@ -58,6 +58,7 @@ services:
       - ./data/web:/var/www/html
       - ./etc/nginx:/etc/nginx/conf.d
       - ./etc/ssl:/etc/letsencrypt
+      - ./data/log:/var/log/nginx
     networks:
       - app-network
 
