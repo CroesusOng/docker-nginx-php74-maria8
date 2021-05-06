@@ -5,7 +5,7 @@ services:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
     ports:
-        - "8000:80"
+        - "8082:80"
     environment:
         - PMA_ARBITRARY=1
         - PMA_HOST=${MYSQL_HOST}
@@ -34,8 +34,8 @@ services:
   php-fpm:
     image: nanoninja/php-fpm:${PHP_VERSION}
     volumes:
-            - "./etc/php:/usr/local/etc/php/conf.d/php.ini"
-            - "./data/web:/var/www/html"
+            - "./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
+            - "./data/web/wordpress:/var/www/html"
     #        - "./data/log/php-fpm:/var/log/php-fpm"
     restart: unless-stopped
     env_file: .env
@@ -54,9 +54,9 @@ services:
     container_name: webserver
     restart: unless-stopped
     ports:
-      - "8001:80"
+      - "8081:80"
     volumes:
-      - ./data/web:/var/www/html
+      - ./data/web/wordpress:/var/www/html
       - ./etc/nginx:/etc/nginx/conf.d
       - ./etc/ssl:/etc/letsencrypt
       - ./data/log/nginx:/var/log/nginx
